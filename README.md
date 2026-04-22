@@ -1,3 +1,6 @@
+You can test this project here:
+https://office-plant-care.vercel.app/
+
 # 🌱 Office Plant Care App
 
 A Tamagotchi-style web app for taking care of office plants. Multiple people share responsibility for watering plants in an office. The app tracks each plant's watering schedule, shows which plants need attention, and gamifies the experience with a leaderboard and real-time notifications.
