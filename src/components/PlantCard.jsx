@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { getPlantStatus, formatRelativeTime, formatDate } from '../lib/utils'
 import { Button } from './Button'
 import styles from './PlantCard.module.css'
@@ -12,7 +12,6 @@ export const PlantCard = ({
   isOwner = false,
   lastWateredByDisplayName = null
 }) => {
-  const [showActivityFeed, setShowActivityFeed] = useState(false)
   const status = getPlantStatus(plant.next_watering_at)
   const statusColor = {
     red: '#ef4444',
@@ -99,20 +98,7 @@ export const PlantCard = ({
         >
           {loading ? '💧...' : '💧 Water this plant'}
         </Button>
-        <button
-          className={styles.feedToggle}
-          onClick={() => setShowActivityFeed(!showActivityFeed)}
-        >
-          📋
-        </button>
       </div>
-
-      {showActivityFeed && (
-        <div className={styles.activityFeed}>
-          <h4>Activity</h4>
-          <p style={{ fontSize: '12px', color: '#999' }}>Last waterings shown here</p>
-        </div>
-      )}
     </div>
   )
 }
