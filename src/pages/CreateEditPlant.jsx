@@ -76,6 +76,7 @@ export const CreateEditPlant = () => {
     e.preventDefault()
     setError('')
     setLoading(true)
+    console.log('deployment test ')
 
     try {
       if (!formData.nickname.trim()) {
